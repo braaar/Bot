@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         PlaceNL Bot
+// @name         GoVegan Bot
 // @namespace    https://github.com/braaar/Bot
-// @version      4
-// @description  De bot voor PlaceNL!
-// @author       NoahvdAa
+// @version      1
+// @description  Bot for Vegan stuff in r/place
+// @author       braaar
 // @match        https://www.reddit.com/r/place/*
 // @match        https://new.reddit.com/r/place/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
