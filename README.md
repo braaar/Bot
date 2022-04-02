@@ -1,4 +1,4 @@
-# GO Vegan and watchdominion.org messaage Bot
+# GO Vegan r/place Bot
 
 The bot for us vegans and vegancirclejerkers This bot automatically fetches [orders](https://github.com/vineethsudhir/Bot/blob/master/orders.json) every few minutes, to prevent bots from working against each other.
 
