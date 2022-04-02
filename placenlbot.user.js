@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GoVegan Bot
 // @namespace    https://github.com/braaar/Bot
-// @version      1
+// @version      2
 // @description  Bot for Vegan stuff in r/place
 // @author       braaar
 // @match        https://www.reddit.com/r/place/*
