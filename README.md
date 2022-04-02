@@ -16,3 +16,7 @@ Before you start, make sure your pixel latency has expired!
 - The bot does not yet take into account an existing cooldown, so it assumes that when you open **r/place** you can immediately place a pixel. In the worst case scenario, your first pixel could waste 4 minutes and 59 seconds of time. 
 
 Thanks to /r/placeNL, whose code provided the base for this bot.
+
+
+## Artwork in this bot
+This bot is setup to maintain the watchdominion.org banner at (664, 476)
