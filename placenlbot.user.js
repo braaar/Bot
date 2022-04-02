@@ -1,16 +1,16 @@
 // ==UserScript==
-// @name         PlaceNL Bot
-// @namespace    https://github.com/PlaceNL/Bot
-// @version      4
-// @description  De bot voor PlaceNL!
-// @author       NoahvdAa
+// @name         GoVegan Bot
+// @namespace    https://github.com/braaar/Bot
+// @version      1
+// @description  Bot for Vegan stuff in r/place
+// @author       braaar
 // @match        https://www.reddit.com/r/place/*
 // @match        https://new.reddit.com/r/place/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @require	     https://cdn.jsdelivr.net/npm/toastify-js
 // @resource     TOASTIFY_CSS https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css
-// @updateURL    https://github.com/TrafficConeGod/Bot/raw/master/placenlbot.user.js
-// @downloadURL  https://github.com/TrafficConeGod/Bot/raw/master/placenlbot.user.js
+// @updateURL    https://github.com/braaar/Bot/raw/master/placenlbot.user.js
+// @downloadURL  https://github.com/braaar/Bot/raw/master/placenlbot.user.js
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -108,7 +108,7 @@ async function attemptPlace() {
 }
 
 function updateOrders() {
-	fetch('https://github.com/vineethsudhir/Bot/blob/master/orders.json').then(async (response) => {
+	fetch('https://braaar.github.io/Bot/orders.json').then(async (response) => {
 		if (!response.ok) return console.warn('Kan orders niet ophalen! (non-ok status code)');
 		const data = await response.json();
 
