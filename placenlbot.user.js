@@ -56,10 +56,22 @@ const COLOR_MAPPINGS = {
 		duration: 10000
 	}).showToast();
 
-	setInterval(updateOrders, 5 * 60 * 1000); // Update orders elke vijf minuten.
-	await updateOrders();
-	attemptPlace();
+    setInterval(loop, 5000);
 })();
+
+async function loop () {
+    let timeRemaining = (5 * 60 * 1000 + 10) - (Date.now() - parseInt(localStorage.getItem('lastRPlaceTime') || 0));
+
+    Toastify({
+		text: 'Time remaining: ' + Math.floor(timeRemaining / 1000),
+		duration: 4500
+	}).showToast();
+
+    if (timeRemaining < 0) {
+        await updateOrders();
+        attemptPlace();
+    }
+}
 
 async function attemptPlace() {
 	var ctx;
@@ -91,12 +103,12 @@ async function attemptPlace() {
 			duration: 10000
 		}).showToast();
 		await place(x, y, colorId);
+        localStorage.setItem('lastRPlaceTime', Date.now());
 
 		Toastify({
 			text: `Waiting for cooldown...`,
 			duration: 315000
 		}).showToast();
-		setTimeout(attemptPlace, 315000); // 5min en 15sec, just to be safe.
 		return;
 	}
 
@@ -104,7 +116,8 @@ async function attemptPlace() {
 		text: 'All pixels are already in the right place!',
 		duration: 10000
 	}).showToast();
-	setTimeout(attemptPlace, 30000); // probeer opnieuw in 30sec.
+
+    localStorage.setItem('lastRPlaceTime', Date.now() - (4 * 60 * 1000));
 }
 
 function updateOrders() {
